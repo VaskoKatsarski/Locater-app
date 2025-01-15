@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryColor: #0076A3;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+.scroll-panel {
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+}
+
+.country-flag {
+    width: 20px;
+    height: auto;
+    margin-left: 5px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    animation: fadeIn 1s ease, moveIn 1s ease;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #fc5c7d;
+}
+
+.animated-text {
+    animation: fadeInUp 1.5s ease;
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, #fff, #f1f1f1);
+    animation: fadeIn 1s ease, moveIn 1s ease;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+    height: 3340px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 65px;
+    padding: 25px;
+    font-size: 1.2rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-group input:hover,
+.input-group input:focus {
+    border-color: #3498db;
+    background-color: #ecf0f1;
+}
+
+.input-group button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.input-group button.btn-clear {
+    background-color: #e74c3c;
+    color: #fff;
+    border-color: #e74c3c;
+    height: 65px;
+    bottom: 10px;
+}
+
+.input-group button.btn-clear:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    color: #fff;
+}
+
+.results {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease;
+}
+
+.results h5 {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    padding: 30px;
+    margin: 0;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    overflow: hidden;
+    animation: pulseAnimation 2s infinite ease-in-out;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.results h5:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: slideIn 2s infinite linear;
+}
+
+@keyframes slideIn {
+    to {
+        left: 100%;
+    }
+}
+
+.results p {
+    background: #FFFCFC;
+    padding: 15px;
+    margin: 0;
+    color: #100F0F;
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom: 1px solid #100F0F;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.results p:last-child {
+    border-bottom: none;
+}
+
+.results p:hover {
+    background-color: #2c3e50;
+}
+
+.selected-info {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 1s ease;
+    color: #333;
+    margin-top: 20px;
+}
+
+.selected-info h5 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: center;
+    animation: shine 2s infinite;
+    overflow: hidden;
+}
+
+.selected-info h5:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #87CEEB, transparent);
+    animation: shineMove 2s infinite;
+}
+
+@keyframes shine {
+    to {
+        color: #fff;
+    }
+}
+
+@keyframes shineMove {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.selected-info p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+    animation: fadeInUp 1s ease;
+}
+
+.selected-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.selected-info li {
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease;
+}
+
+.selected-info img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-top: 15px;
+    animation: zoomIn 1s ease;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons button {
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.buttons button:hover {
+    background-color: #2ecc71;
+}
+
+.buttons button#get-weather-button {
+    background-color: #0076A3;
+    color: #fff;
+}
+
+.buttons button#get-weather-button:hover {
+    background-color: #005580;
+}
+
+#weather-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #a1c4fd);
+    color: #333;
+    border: 2px solid #ddd;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 420px;
+}
+
+#weather-card-header {
+    background-color: #87CEEB;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    position: relative;
+    border-radius: 16px 16px 0 0;
+}
+
+#close-weather-card {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#weather-info-container {
+    padding: 20px;
+}
+
+#weather-info-container p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+#weather-info-container h1 {
+    margin: 0;
+    margin-bottom: 0.4em;
+    text-align: center;
+    font-size: 2em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

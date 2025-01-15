@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Locations with Google Maps</title>
+    <link rel="stylesheet" href="styleResponsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    
+
+</head>
+
+<body>
+<body>
+
+<div id="map-container"></div>
+ <div class="scroll-panel">
+    <div class="container">
+	<div id="google_translate_element"></div>
+        <div class="header">
+            <h1 class="animated-text">Discover Places with Google Maps</h1>
+        </div>
+        <div class="form-container">
+     
+            <div class="input-group">
+                <input type="text" class="form-control" id="search_input" >
+                <div class="input-group-append">
+                    <button class="btn btn-clear" type="button" id="clear-button">CLEAR</button>
+                </div>
+            </div>
+            <div class="results" id="results-container"></div>
+            <div class="selected-info" id="selected-info-container"></div>
+            <div class="buttons">
+                <button class="btn btn-info" type="button" id="toggle-address-components">ADDRESS COMPONENTS</button>
+                <button class="btn btn-secondary" type="button" id="hide-info-button">HIDE INFO</button>
+                <button class="btn btn-success" type="button" id="explore-nearby-button">EXPLORE NEARBY</button>
+                 <button class="btn btn-primary" type="button" id="get-weather-button">
+                <i id="weather-icon" class="fas fa-cloud-sun"></i>WEATHER
+            </button>
+			 </div>
+            <div id="weather-container"  style="display: none;">
+  <div id="weather-card" class="card">
+    <div class="card-header" id="weather-card-header" style="display: none;">
+      Weather
+      <button id="close-weather-card" onclick="closeWeatherCard()">✖</button>
+    </div>
+    <div class="card-body" id="weather-info-container" style="display: none;">
+	
+   </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://restcountries.com/v2/all" defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0-kkW8Nun4sfMF_47-johiFf5ZR6N64A&libraries=places&callback=initMap&language=bg"></script>
+    <script src="index.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+</body>
+
+</html>
+
+
+    
