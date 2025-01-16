@@ -1,3 +1,4 @@
+![Locater](https://github.com/user-attachments/assets/8c8dca9a-6ed3-40f5-bcfe-23670b332907)
 # Locater-app
 This script brings together an intuitive front-end design and dynamic features to create an interactive web app centered on exploring locations with Google Maps. Here’s a breakdown of its key features and structure:
 
